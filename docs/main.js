@@ -956,7 +956,8 @@ function initCardImageGenerator() {
         let img = document.createElement('img');
         img.crossOrigin = "Anonymous";
         if (url.substr(0, 11) != 'data:image/' && url.substr(0, 8) != 'file:///') {
-            img.src = CORS_ANYWHERE_BASE_URL + url;
+            //img.src = CORS_ANYWHERE_BASE_URL + url;
+		img.src = url;
         } else {
             img.src = url;
         }
