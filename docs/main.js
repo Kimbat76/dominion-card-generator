@@ -3,7 +3,8 @@ let templateSize = 0; //save globally
 let useCORS = true; // flag to activate loading of external images via CORS helper function -> otherwise canvas is tainted and download button not working
 //const CORS_ANYWHERE_BASE_URL = 'https://dominion-card-generator-cors.herokuapp.com/';
 //const CORS_ANYWHERE_BASE_URL = 'https://thingproxy.freeboard.io/fetch/';
-const CORS_ANYWHERE_BASE_URL = 'https://proxy.cors.sh/'; // from https://blog.grida.co/cors-anywhere-for-everyone-free-reliable-cors-proxy-service-73507192714e
+//const CORS_ANYWHERE_BASE_URL = 'https://proxy.cors.sh/'; // from https://blog.grida.co/cors-anywhere-for-everyone-free-reliable-cors-proxy-service-73507192714e
+const CORS_ANYWHERE_BASE_URL = 'https://corsproxy.io/?';
 
 Array.prototype.remove = function () {
     var what, a = arguments,
