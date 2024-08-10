@@ -594,7 +594,7 @@ function initCardImageGenerator() {
                     context.drawImage(images[27], 0, 0); //CardColorThree
 		} else if (splitPosition == 30) // its the added mode to create bottom gradient in multicolor half action
                     context.drawImage(getRecoloredImage(1, 1), 0, 0); //CardColorTwo - Half
-                    context.drawImage(images[images.length()], 0, 0); //CardColorBottomGrad
+                    context.drawImage(images[images.length], 0, 0); //CardColorBottomGrad
                 } else {
                     context.drawImage(getRecoloredImage(!differentIntensities ? splitPosition : 12, 1), 0, 0); //CardColorTwo
                 }
@@ -1045,9 +1045,11 @@ function initCardImageGenerator() {
         images[i].crossOrigin = "Anonymous";
         images[i].src = "card-resources/" + sources[i];
     }
+    last_index = images.length
     for (var i = 0; i < sources_gradient.length; i++) {
-	var current_index = i + images.length()
+	var current_index = i + last_index
         images.push(new Image());
+	recoloredImages.push(false);
         images[current_index].crossOrigin = "Anonymous";
         images[current_index].src = "card-resources/" + sources_gradient[i];
     }
