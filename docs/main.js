@@ -1019,8 +1019,7 @@ function initCardImageGenerator() {
 		"TraitColorOne.png",
 		"TraitBrown.png",
 		"TraitColorOneSide.png", //30
-		"TraitBrownSide.png",
-	        "CardColorBottomGrad.png"
+		"TraitBrownSide.png"
 		//icons come afterwards
 	];
     for (var i = 0; i < sources.length; i++)
