@@ -1020,12 +1020,11 @@ function initCardImageGenerator() {
 		"TraitColorOne.png",
 		"TraitBrown.png",
 		"TraitColorOneSide.png", //30
-		"TraitBrownSide.png"
+		"TraitBrownSide.png",
+	        "CardColorBottomGrad.png"
 		//icons come afterwards
 	];
-    var sources_gradient = [
-		"CardColorBottomGrad.png"
-	];
+
     for (var i = 0; i < sources.length; i++)
         recoloredImages.push(false);
     var legend = document.getElementById("legend");
@@ -1045,14 +1044,7 @@ function initCardImageGenerator() {
         images[i].crossOrigin = "Anonymous";
         images[i].src = "card-resources/" + sources[i];
     }
-    var last_index = images.length
-    for (var i = 0; i < sources_gradient.length; i++) {
-	var current_index = i + last_index
-        images.push(new Image());
-	recoloredImages.push(false);
-        images[current_index].crossOrigin = "Anonymous";
-        images[current_index].src = "card-resources/" + sources_gradient[i];
-    }
+
 
     var simpleOnChangeInputCheckboxIDs = ["traveller", "trait"];
     var simpleOnChangeInputFieldIDs = ["title", "description", "type", "credit", "creator", "price", "preview", "type2", "color2split", "boldkeys", "picture-x", "picture-y", "picture-zoom"];
