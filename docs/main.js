@@ -122,6 +122,7 @@ function initCardImageGenerator() {
     var canvases = document.getElementsByClassName("myCanvas");
 
     var images = [];
+    var images_gradient = [];
     var imagesLoaded = false;
     var recolorFactorList = [
 		[0.75, 1.1, 1.35, 0, 0, 0, 1, 2, 3, 4, 5, 6],
@@ -591,6 +592,9 @@ function initCardImageGenerator() {
                 if (splitPosition == 27) {
                     context.drawImage(getRecoloredImage(1, 1), 0, 0); //CardColorTwo - Half
                     context.drawImage(images[27], 0, 0); //CardColorThree
+		} else if (splitPosition == 30) // its the added mode to create bottom gradient in multicolor half action
+                    context.drawImage(getRecoloredImage(1, 1), 0, 0); //CardColorTwo - Half
+                    context.drawImage(images[images.length()], 0, 0); //CardColorBottomGrad
                 } else {
                     context.drawImage(getRecoloredImage(!differentIntensities ? splitPosition : 12, 1), 0, 0); //CardColorTwo
                 }
@@ -1019,6 +1023,9 @@ function initCardImageGenerator() {
 		"TraitBrownSide.png"
 		//icons come afterwards
 	];
+    var sources_gradient = [
+		"CardColorBottomGrad.png"
+	];
     for (var i = 0; i < sources.length; i++)
         recoloredImages.push(false);
     var legend = document.getElementById("legend");
@@ -1037,6 +1044,12 @@ function initCardImageGenerator() {
         images.push(new Image());
         images[i].crossOrigin = "Anonymous";
         images[i].src = "card-resources/" + sources[i];
+    }
+    for (var i = 0; i < sources_gradient.length; i++) {
+	var current_index = i + images.length()
+        images.push(new Image());
+        images[current_index].crossOrigin = "Anonymous";
+        images[current_index].src = "card-resources/" + sources_gradient[i];
     }
 
     var simpleOnChangeInputCheckboxIDs = ["traveller", "trait"];
