@@ -122,7 +122,6 @@ function initCardImageGenerator() {
     var canvases = document.getElementsByClassName("myCanvas");
 
     var images = [];
-    var images_gradient = [];
     var imagesLoaded = false;
     var recolorFactorList = [
 		[0.75, 1.1, 1.35, 0, 0, 0, 1, 2, 3, 4, 5, 6],
@@ -592,9 +591,6 @@ function initCardImageGenerator() {
                 if (splitPosition == 27) {
                     context.drawImage(getRecoloredImage(1, 1), 0, 0); //CardColorTwo - Half
                     context.drawImage(images[27], 0, 0); //CardColorThree
-		} else if (splitPosition == 40) // its the added mode to create bottom gradient in multicolor half action
-                    context.drawImage(getRecoloredImage(1, 1), 0, 0); //CardColorTwo - Half
-                    context.drawImage(images[images.length - 1], 0, 0); //CardColorBottomGrad
                 } else {
                     context.drawImage(getRecoloredImage(!differentIntensities ? splitPosition : 12, 1), 0, 0); //CardColorTwo
                 }
@@ -1023,7 +1019,6 @@ function initCardImageGenerator() {
 		"TraitBrownSide.png"
 		//icons come afterwards
 	];
-
     for (var i = 0; i < sources.length; i++)
         recoloredImages.push(false);
     var legend = document.getElementById("legend");
@@ -1043,7 +1038,6 @@ function initCardImageGenerator() {
         images[i].crossOrigin = "Anonymous";
         images[i].src = "card-resources/" + sources[i];
     }
-
 
     var simpleOnChangeInputCheckboxIDs = ["traveller", "trait"];
     var simpleOnChangeInputFieldIDs = ["title", "description", "type", "credit", "creator", "price", "preview", "type2", "color2split", "boldkeys", "picture-x", "picture-y", "picture-zoom"];
