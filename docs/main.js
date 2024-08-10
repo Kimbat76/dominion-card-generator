@@ -596,7 +596,7 @@ function initCardImageGenerator() {
                     context.drawImage(images[32], 0, 0); //CardColorBottomGrad.png
 		}else if(splitPosition == 31) {
                     context.drawImage(getRecoloredImage(1, 1), 0, 0); //CardColorTwo - Half
-                    context.drawImage(images[33], 0, 0); //DescriptionOverlayGradient
+                    context.drawImage(images[32], 0, 0); //DescriptionOverlayGradient
                 } else {
                     context.drawImage(getRecoloredImage(!differentIntensities ? splitPosition : 12, 1), 0, 0); //CardColorTwo
                 }
