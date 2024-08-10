@@ -592,7 +592,7 @@ function initCardImageGenerator() {
                 if (splitPosition == 27) {
                     context.drawImage(getRecoloredImage(1, 1), 0, 0); //CardColorTwo - Half
                     context.drawImage(images[27], 0, 0); //CardColorThree
-		} else if (splitPosition == 30) // its the added mode to create bottom gradient in multicolor half action
+		} else if (splitPosition == 40) // its the added mode to create bottom gradient in multicolor half action
                     context.drawImage(getRecoloredImage(1, 1), 0, 0); //CardColorTwo - Half
                     context.drawImage(images[images.length - 1], 0, 0); //CardColorBottomGrad
                 } else {
@@ -1020,8 +1020,7 @@ function initCardImageGenerator() {
 		"TraitColorOne.png",
 		"TraitBrown.png",
 		"TraitColorOneSide.png", //30
-		"TraitBrownSide.png",
-	        "CardColorBottomGrad.png"
+		"TraitBrownSide.png"
 		//icons come afterwards
 	];
 
