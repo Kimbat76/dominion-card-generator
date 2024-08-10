@@ -1,7 +1,7 @@
 // Names of the caches used in this version of the service worker.
 // Increase chache number when you update any of the local resources, which will in turn trigger the install event again.
-const PRECACHE_CORE = 'precache-core-v43';
-const PRECACHE_CARD = 'precache-card-v8';
+const PRECACHE_CORE = 'precache-core-v44';
+const PRECACHE_CARD = 'precache-card-v9';
 const RUNTIME = 'runtime';
 
 // A list of local resources we always want to be cached.
@@ -69,7 +69,8 @@ const PRECACHE_CARD_URLS = [
   'card-resources/VP.png',
   'card-resources/VP-Token.png',
   'card-resources/Traveller.png',
-  'card-resources/CardColorBottomGrad.png'
+  'card-resources/CardColorBottomGrad.png',
+  'card-resources/DescriptionOverlayGradient.png'
 ];
 
 // The install handler takes care of precaching the resources we always need.
