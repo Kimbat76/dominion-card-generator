@@ -596,7 +596,7 @@ function initCardImageGenerator() {
                     context.drawImage(images[32], 0, 0); //CardColorBottomGrad.png
 		}else if(splitPosition == 31) {
                     context.drawImage(getRecoloredImage(1, 1), 0, 0); //CardColorTwo - Half
-                    context.drawImage(images[3], 44, 1094); //DescriptionFocus
+                    context.drawImage(images[33], 44, 1094); //DescriptionOverlayGradient
                 } else {
                     context.drawImage(getRecoloredImage(!differentIntensities ? splitPosition : 12, 1), 0, 0); //CardColorTwo
                 }
@@ -1023,7 +1023,8 @@ function initCardImageGenerator() {
 		"TraitBrown.png",
 		"TraitColorOneSide.png", //30
 		"TraitBrownSide.png",
-	    "CardColorBottomGrad.png"
+	    "CardColorBottomGrad.png",
+	    "DescriptionOverlayGradient.png"
 		//icons come afterwards
 	];
     for (var i = 0; i < sources.length; i++)
