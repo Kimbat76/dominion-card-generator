@@ -593,7 +593,7 @@ function initCardImageGenerator() {
                     context.drawImage(images[27], 0, 0); //CardColorThree
 		} if else(splitPosition == 30) {
                     context.drawImage(getRecoloredImage(1, 1), 0, 0); //CardColorTwo - Half
-                    context.drawImage(images[32], 0, 0); //CardColorBottomGrad.png
+                    context.drawImage(images[27], 0, 0); //CardColorBottomGrad.png
                 } else {
                     context.drawImage(getRecoloredImage(!differentIntensities ? splitPosition : 12, 1), 0, 0); //CardColorTwo
                 }
