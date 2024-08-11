@@ -7,6 +7,13 @@ Open the web-app [here](https://shardofhonor.github.io/dominion-card-generator/)
 ```
 https://shardofhonor.github.io/dominion-card-generator/
 ```
+### NEW FEATURES IN THIS FORK
+
+This fork of the original project has been made in order to allow the production of specific cards that where not supported in the original project.
+New features :
+- Gradient color (color to greyish background) for 2 colors cards, such as "Contract". (Option "Double Gradient" in Split Posision). This feature encompass as well color to regular Action/Event, i.e. one sided gradient.
+- Not only numerical values on top of icons (coins, debt ...) but as well alphabetical, to allow "x2" in coins symbol for the "Fortune" card.
+
 
 ### Disclaimer
 
